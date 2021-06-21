@@ -10,3 +10,9 @@ def no_dupes?(arr)
   end
   array
 end
+
+# Write a method no_consecutive_repeats?(arr) that accepts an array as an arg. The method should return true if an element never appears consecutively in the array; it should return false otherwise.
+
+def no_consecutive_repeats?(arr)
+  
+end
