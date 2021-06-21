@@ -54,8 +54,8 @@ def longest_streak(str)
   return string
 end
 
-p longest_streak('a')           # => 'a'
-p longest_streak('accccbbb')    # => 'cccc'
-p longest_streak('aaaxyyyyyzz') # => 'yyyyy
-p longest_streak('aaabbb')      # => 'bbb'
-p longest_streak('abc')         # => 'c'
+# Write a method bi_prime?(num) that accepts a number as an arg and returns a boolean indicating whether or not the number is a bi-prime. A bi-prime is a positive integer that can be obtained by multiplying two prime numbers.
+
+def bi_prime?
+  
+end
