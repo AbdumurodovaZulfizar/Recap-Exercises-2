@@ -40,5 +40,22 @@ end
 
 # Write a method longest_streak(str) that accepts a string as an arg. The method should return the longest streak of consecutive characters in the string. If there are any ties, return the streak that occurs later in the string.
 def longest_streak(str)
-  
+  # return str if str.length == 1
+  hash = Hash.new(0)
+  my_hash = {}
+  string = ''
+  str.each_char do |char|
+    hash[char] += 1
+  end
+  my_hash = hash.sort_by {|k, v| v}
+  my_hash[-1][-1].times do
+    string += my_hash[-1][0]
+  end
+  return string
 end
+
+p longest_streak('a')           # => 'a'
+p longest_streak('accccbbb')    # => 'cccc'
+p longest_streak('aaaxyyyyyzz') # => 'yyyyy
+p longest_streak('aaabbb')      # => 'bbb'
+p longest_streak('abc')         # => 'c'
