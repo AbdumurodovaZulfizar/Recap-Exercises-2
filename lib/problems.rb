@@ -38,5 +38,7 @@ def char_indices(str)
   hash
 end
 
-puts char_indices('mississippi')   # => {"m"=>[0], "i"=>[1, 4, 7, 10], "s"=>[2, 3, 5, 6], "p"=>[8, 9]}
-puts char_indices('classroom')  
+# Write a method longest_streak(str) that accepts a string as an arg. The method should return the longest streak of consecutive characters in the string. If there are any ties, return the streak that occurs later in the string.
+def longest_streak(str)
+  
+end
