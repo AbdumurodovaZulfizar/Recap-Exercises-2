@@ -28,8 +28,15 @@ def no_consecutive_repeats?(arr)
   true
 end
 
-puts no_consecutive_repeats?(['cat', 'dog', 'mouse', 'dog'])     # => true
-puts no_consecutive_repeats?(['cat', 'dog', 'dog', 'mouse'])     # => false
-puts no_consecutive_repeats?([10, 42, 3, 7, 10, 3])              # => true
-puts no_consecutive_repeats?([10, 42, 3, 3, 10, 3])              # => false
-puts no_consecutive_repeats?(['x'])                              # => true
+# Write a method char_indices(str) that takes in a string as an arg. The method should return a hash containing 
+# haracters as keys. The value associated with each key should be an array containing the indices where that character is # found.
+def char_indices(str)
+  hash = Hash.new { |h, k| h[k] = [] }
+  str.each_char.with_index do |ele, idx|
+    hash[ele] << idx
+  end
+  hash
+end
+
+puts char_indices('mississippi')   # => {"m"=>[0], "i"=>[1, 4, 7, 10], "s"=>[2, 3, 5, 6], "p"=>[8, 9]}
+puts char_indices('classroom')  
