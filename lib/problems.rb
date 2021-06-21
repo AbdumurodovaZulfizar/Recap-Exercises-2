@@ -56,6 +56,27 @@ end
 
 # Write a method bi_prime?(num) that accepts a number as an arg and returns a boolean indicating whether or not the number is a bi-prime. A bi-prime is a positive integer that can be obtained by multiplying two prime numbers.
 
-def bi_prime?
-  
+def bi_prime?(num)
+  array = []
+  (2...num).each do |fac|
+    if num % fac == 0
+      array << fac
+    end
+  end
+  return true if array.length == 1
+  array.each do |ele|
+    (2...ele).each do |fac2|
+      if ele % fac2 == 0
+        return false
+      end
+    end
+  end
+  true
 end
+
+puts bi_prime?(14)   # => true
+puts bi_prime?(22)   # => true
+puts bi_prime?(25)   # => true
+puts bi_prime?(94)   # => true
+puts bi_prime?(24)   # => false
+puts bi_prime?(64)   # => false
