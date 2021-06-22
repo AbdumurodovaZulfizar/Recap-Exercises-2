@@ -57,3 +57,22 @@ describe "bi_prime?" do
     expect(bi_prime?(64)).to eq(false)
   end
 end
+
+describe "vigenere_cipher" do
+  it "should replace the leeters according to keys" do
+    expect(vigenere_cipher("toerrishuman", [1])).to eq("upfssjtivnbo")
+    expect(vigenere_cipher("toerrishuman", [1, 2])).to eq("uqftsktjvobp")
+    expect(vigenere_cipher("toerrishuman", [1, 2, 3])).to eq("uqhstltjxncq")
+    expect(vigenere_cipher("yawn", [5, 1])).to eq("dbbo")
+  end
+end
+
+describe "vowel_rotate" do
+  it "should replace vowels" do
+    expect(vowel_rotate('computer')).to eq("cempotur")
+    expect(vowel_rotate('oranges')).to eq("erongas")
+    expect(vowel_rotate('headphones')).to eq("heedphanos")
+    expect(vowel_rotate('bootcamp')).to eq("baotcomp")
+    expect(vowel_rotate('awesome')).to eq("ewasemo")
+  end
+end
