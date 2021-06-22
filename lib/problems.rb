@@ -104,6 +104,12 @@ end
 
 # Extend the string class by defining a String#select method that accepts a block. The method should return a new string containing characters of the original string that return true when passed into the block. If no block is passed, then return the empty string. Do not use the built-in Array#select in your solution.
 
+public
+
 def my_select
-  
+  return '' unless block_given?
+
+    selected_str = ''
+    self.each_char { |ele| selected_str += ele if yield(ele)}
+    selected_str
 end
