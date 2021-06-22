@@ -116,6 +116,15 @@ end
 
 # Extend the string class by defining a String#map! method that accepts a block. The method should modify the existing string by replacing every character with the result of calling the block, passing in the original character and it's index. Do not use the built-in Array#map or Array#map! in your solution.
 
-def my_map
+def map!(proc = nil)
+  return enum_for unless block_given?
+
+end
+
+# Write a method multiply(a, b) that takes in two numbers and returns their product.
+
+# You must solve this recursively (no loops!)
+# You must not use the multiplication (*) operator
+def multiply(a, b)
   
 end
