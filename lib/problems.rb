@@ -95,3 +95,9 @@ def vigenere_cipher(message, keys)
   end
   my_arr.flatten.join('')
 end
+
+# Write a method vowel_rotate(str) that accepts a string as an arg and returns the string where every vowel is replaced with the vowel the appears before it sequentially in the original string. The first vowel of the string should be replaced with the last vowel.
+
+def vowel_rotate(str)
+  
+end
