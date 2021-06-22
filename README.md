@@ -29,7 +29,7 @@ Ruby 3.0.1
 
 Contributions, issues and feature requests are welcome!
 
-You can do it on [issues page](https://github.com/AbdumurodovaZulfizar/Recap-Exercise/issues/1).
+You can do it on [issues page](https://github.com/AbdumurodovaZulfizar/Recap-Exercises-2/issues/1).
 
 ## Show your support
 
