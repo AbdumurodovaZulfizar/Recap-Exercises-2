@@ -99,5 +99,11 @@ end
 # Write a method vowel_rotate(str) that accepts a string as an arg and returns the string where every vowel is replaced with the vowel the appears before it sequentially in the original string. The first vowel of the string should be replaced with the last vowel.
 
 def vowel_rotate(str)
+  vowel = 'aeiou'
+end
+
+# Extend the string class by defining a String#select method that accepts a block. The method should return a new string containing characters of the original string that return true when passed into the block. If no block is passed, then return the empty string. Do not use the built-in Array#select in your solution.
+
+def my_select
   
 end
