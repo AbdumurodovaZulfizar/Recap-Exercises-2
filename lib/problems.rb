@@ -74,9 +74,12 @@ def bi_prime?(num)
   true
 end
 
-puts bi_prime?(14)   # => true
-puts bi_prime?(22)   # => true
-puts bi_prime?(25)   # => true
-puts bi_prime?(94)   # => true
-puts bi_prime?(24)   # => false
-puts bi_prime?(64)   # => false
+# A Caesar cipher takes a word and encrypts it by offsetting each letter in the word by a fixed number, called the key. Given a key of 3, for example: a -> d, p -> s, and y -> b.
+
+# A Vigenere Cipher is a Caesar cipher, but instead of a single key, a sequence of keys is used. For example, if we encrypt "bananasinpajamas" with the key sequence 1, 2, 3, then the result would be "ccqbpdtkqqcmbodt":
+
+# Write a method vigenere_cipher(message, keys) that accepts a string and a key-sequence as args, returning the encrypted message. Assume that the message consists of only lowercase alphabetic characters.
+
+def vigenere_cipher(message, keys)
+  
+end
