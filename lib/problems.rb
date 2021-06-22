@@ -147,6 +147,13 @@ end
 
 # Write a method lucasSequence that accepts a number representing a length as an arg. The method should return an array containing the Lucas Sequence up to the given length. Solve this recursively.
 
-def lucasSequence(num)
-  
+def lucas_sequence(num)
+  arr = []
+  return arr if num == 0
+  return arr << 2 if num == 1
+  return lucas_sequence(1) << 1 if num == 2
+  if num > 2
+    arr = lucas_sequence(num-1) << (lucas_sequence(num-1)[-1] + lucas_sequence(num-1)[-2])
+  end
+  arr
 end
