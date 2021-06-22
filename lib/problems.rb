@@ -152,7 +152,7 @@ def multiply(a, b)
       mul += (-b)
     end
   end
-  puts mul
+  mul
 end
 
 # The Lucas Sequence is a sequence of numbers. The first number of the sequence is 2. The second number of the Lucas Sequence is 1. To generate the next number of the sequence, we add up the previous two numbers. For example, the first six numbers of the sequence are: 2, 1, 3, 4, 7, 11, ...
