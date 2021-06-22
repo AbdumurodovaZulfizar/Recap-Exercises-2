@@ -182,11 +182,3 @@ def prime_factorization(num)
 
   [num]
 end
-
-prime_factorization(12)     # => [2, 2, 3]
-prime_factorization(24)     # => [2, 2, 2, 3]
-prime_factorization(25)     # => [5, 5]
-prime_factorization(60)     # => [2, 2, 3, 5]
-prime_factorization(7)      # => [7]
-prime_factorization(11)     # => [11]
-prime_factorization(2017)   # => [2017]
