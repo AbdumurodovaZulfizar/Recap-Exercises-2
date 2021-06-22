@@ -126,5 +126,19 @@ end
 # You must solve this recursively (no loops!)
 # You must not use the multiplication (*) operator
 def multiply(a, b)
-  
+  mul = 0
+  if a >= 0 && b >= 0
+    a.times do
+      mul += b
+    end
+  elsif a >= 0 && b < 0
+    a.times do
+      mul += b
+    end
+  else a < 0 && b < 0
+    (-a).times do
+      mul += (-b)
+    end
+  end
+  puts mul
 end
