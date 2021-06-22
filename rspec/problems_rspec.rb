@@ -76,3 +76,49 @@ describe "vowel_rotate" do
     expect(vowel_rotate('awesome')).to eq("ewasemo")
   end
 end
+
+describe "my_select" do
+  it "should work as select" do
+    expect("app academy".my_select { |ch| !"aeiou".include?(ch) }).to eq("pp cdmy")
+    expect("HELLOworld".my_select { |ch| ch == ch.upcase }).to eq("HELLO")
+    expect("HELLOworld".my_select).to eq("")
+  end
+end
+
+describe "map!" do
+  it "should work as map" do
+    word_1 = "Lovelace"
+    example1 =  word_1.map! do |ch| 
+          if ch == 'e'
+              '3'
+          elsif ch == 'a'
+              '4'
+          else
+              ch
+          end
+      end
+
+      word_2 = "Dijkstra"
+      example2 =  word_2.map! do |ch, i|
+            if i.even?
+                ch.upcase
+            else
+                ch.downcase
+            end
+        end
+    expect(example1).to eq("Lov3l4c3")
+    expect(example2).to eq("DiJkStRa")
+  end
+end
+
+describe "multiply" do
+  it "should multiple of two numbers" do
+    expect(multiply(3, 5)).to eq(15)
+    expect(multiply(5, 3)).to eq(15)
+    expect(multiply(2, 4)).to eq(8)
+    expect(multiply(0, 10)).to eq(0)
+    expect(multiply(-3, -6)).to eq(18)
+    expect(multiply(3, -6)).to eq(-18)
+    expect(multiply(-3, 6)).to eq(-18)
+  end
+end
