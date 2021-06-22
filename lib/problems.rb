@@ -99,7 +99,18 @@ end
 # Write a method vowel_rotate(str) that accepts a string as an arg and returns the string where every vowel is replaced with the vowel the appears before it sequentially in the original string. The first vowel of the string should be replaced with the last vowel.
 
 def vowel_rotate(str)
-  vowel = 'aeiou'
+  new_str = str[0..-1]
+    vowels = 'aeiou'
+
+    vowel_idxs = (0...str.length).select { |i| vowels.include?(str[i]) }
+    rotated_vowel_idxs = vowel_idxs.rotate(-1)
+
+    vowel_idxs.each_with_index do |vowel_idx, i|
+        new_vowel = str[rotated_vowel_idxs[i]]
+        new_str[vowel_idx] = new_vowel
+    end
+
+    new_str
 end
 
 # Extend the string class by defining a String#select method that accepts a block. The method should return a new string containing characters of the original string that return true when passed into the block. If no block is passed, then return the empty string. Do not use the built-in Array#select in your solution.
@@ -161,5 +172,23 @@ end
 # Write a method prime_factorization(num) that accepts a number and returns an array representing the prime factorization of the given number. This means that the array should contain only prime numbers that multiply together to the given num. The array returned should contain numbers in ascending order. Do this recursively.
 
 def prime_factorization(num)
-  
+  array = []
+    (2..num).each do |fac|
+      (2...fac).each do |fac1|
+        if fac % fac1 != 0
+          array << fac
+        end
+        
+      end
+      
+    end
+    puts array
 end
+
+prime_factorization(12)     # => [2, 2, 3]
+prime_factorization(24)     # => [2, 2, 2, 3]
+prime_factorization(25)     # => [5, 5]
+prime_factorization(60)     # => [2, 2, 3, 5]
+prime_factorization(7)      # => [7]
+prime_factorization(11)     # => [11]
+prime_factorization(2017)   # => [2017]
