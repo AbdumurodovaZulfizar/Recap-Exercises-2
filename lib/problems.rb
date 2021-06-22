@@ -173,17 +173,14 @@ end
 # Write a method prime_factorization(num) that accepts a number and returns an array representing the prime factorization of the given number. This means that the array should contain only prime numbers that multiply together to the given num. The array returned should contain numbers in ascending order. Do this recursively.
 
 def prime_factorization(num)
-  array = []
-    (2..num).each do |fac|
-      (2...fac).each do |fac1|
-        if fac % fac1 != 0
-          array << fac
-        end
-        
-      end
-      
+  (2...num).each do |fact|
+    if (num % fact == 0)
+        otherFact = num / fact
+        return [ *prime_factorization(fact), *prime_factorization(otherFact) ]
     end
-    puts array
+  end
+
+  [num]
 end
 
 prime_factorization(12)     # => [2, 2, 3]
