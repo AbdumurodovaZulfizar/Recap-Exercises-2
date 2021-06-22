@@ -81,5 +81,17 @@ end
 # Write a method vigenere_cipher(message, keys) that accepts a string and a key-sequence as args, returning the encrypted message. Assume that the message consists of only lowercase alphabetic characters.
 
 def vigenere_cipher(message, keys)
-  
+  alphabet ='abcdefghijklmnopqrstuvwxyz'
+  array = message.split('')
+  my_arr = []
+  new_array = array.each_slice(keys.length).to_a
+  new_array.each do |arr|
+    i = 0
+    while i < keys.length
+      arr[i] = alphabet[(alphabet.index(arr[i].to_s) + keys[i])%26]
+      i += 1
+    end
+    my_arr << arr
+  end
+  my_arr.flatten.join('')
 end
