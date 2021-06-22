@@ -157,3 +157,9 @@ def lucas_sequence(num)
   end
   arr
 end
+
+# Write a method prime_factorization(num) that accepts a number and returns an array representing the prime factorization of the given number. This means that the array should contain only prime numbers that multiply together to the given num. The array returned should contain numbers in ascending order. Do this recursively.
+
+def prime_factorization(num)
+  
+end
