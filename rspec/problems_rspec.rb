@@ -133,3 +133,15 @@ describe "lucas_sequence" do
     expect(lucas_sequence(8)).to eq([2, 1, 3, 4, 7, 11, 18, 29])
   end
 end
+
+describe "prime_factorization" do
+  it "should return prime factors of number" do
+    expect(prime_factorization(12)).to eq([2, 2, 3])
+    expect(prime_factorization(24)).to eq([2, 2, 2, 3])
+    expect(prime_factorization(25)).to eq([5, 5])
+    expect(prime_factorization(60)).to eq([2, 2, 3, 5])
+    expect(prime_factorization(7)).to eq([7])
+    expect(prime_factorization(11)).to eq([11])
+    expect(prime_factorization(2017)).to eq([2017])
+  end
+end
